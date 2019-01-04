@@ -23,7 +23,8 @@
                 <label> PASSWORD </label><input type="password" name="pws" >
                 <input type="submit" value="Login">
             </form>
-        <?php }else { ?>
+        <?php }else if(isset($_SESSION['login']) && $_SESSION['login']=="masuk"){ ?>
+        
         <form action="cari.php" method="POST">
         <table>
             <tr><td colspan="2">PENCARIAN</td></tr>
@@ -109,6 +110,8 @@
             $b = base64_encode($_POST['pws']);
             if($a==X && $b==Y){
                 $_SESSION['login']="masuk";
+            }else 
+                $_SESSION['login']="";
             }
         }
     ?>

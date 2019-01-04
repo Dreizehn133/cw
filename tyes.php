@@ -1,7 +1,7 @@
 <?php
-echo md5("ayam goreng");
+echo md5("");
 echo "<br>";
-echo base64_encode("ayam goreng");
+echo base64_encode("");
 echo "<br>";
-echo base64_encode("4n4K 4L4y");
+echo base64_encode("");
 ?>
